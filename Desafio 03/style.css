@@ -76,9 +76,19 @@ fieldset .input-wrapper{
   margin-bottom: 16px;
 }
 
-fieldset .checkbox-wrapper input{
-  display: none;
+fieldset .checkbox-wrapper{
+  position: relative;
 }
+
+fieldset .checkbox-wrapper input{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+
+  opacity: 0;
+
+}
+
 
 fieldset .checkbox-wrapper label{
   display: flex;
@@ -92,6 +102,10 @@ fieldset .checkbox-wrapper label::before{
   height: 20px;
   border: 1px solid #C1BCCC;
   border-radius: 8px;
+}
+
+fieldset .checkbox-wrapper input:focus + label::before{
+  outline: 2px solid black ;
 }
 
 fieldset .checkbox-wrapper input:checked + label::before{
